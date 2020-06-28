@@ -2,6 +2,8 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import React, { useState } from "react"
 import MenuMobile from "./MenuMobile"
 import { FaBars } from "react-icons/fa"
+import styled from "styled-components"
+import LogoIka from "../../static/logo"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -23,7 +25,11 @@ const Header = () => {
     <div className="container pt-6 pb-12 md:pt-12">
       <div className="flex justify-between items-center">
         <Link to="/">
-          <img alt="Logo" className="w-24 md:w-32" src="logo.svg" />
+          {/* <img alt="Logo" className="w-24 md:w-32" src="logo.svg" /> */}
+          <Logo>
+            <Inline><LogoIka style="display: inline"/></Inline>
+            <Inline>K<A>.</A><B>Hondoh</B></Inline>
+          </Logo>
         </Link>
 
         <button
@@ -57,3 +63,22 @@ const Header = () => {
 }
 
 export default Header
+
+const Logo = styled.h1`
+  font-size: 40px;
+  font-weight: 800;
+  display: inline-block;
+`
+
+const A = styled.span`
+  color: #F29188;
+`
+
+const B = styled.span`
+  color: #2B5973;
+`
+
+const Inline = styled.div`
+  display: inline-block;
+  padding-left: 10px;
+`
