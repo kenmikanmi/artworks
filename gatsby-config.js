@@ -11,19 +11,19 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 module.exports = {
   siteMetadata: {
     menu: [
-      { name: "Home", to: "/" },
+      { name: "Artworks", to: "/" },
       { name: "About", to: "/about" },
     ],
     links: {
       facebook: "https://www.facebook.com/",
       instagram: "https://www.instagram.com/",
       pinterest: "https://pinterest.com/",
-      twitter: "https://twitter.com/",
+      twitter: "https://twitter.com/Earllibrary",
     },
     locale: "en",
-    title: `John Doe`,
-    description: `Photography portfolio of John Doe`,
-    author: `@johndoe`,
+    title: `Kenya Hondoh`,
+    description: `Artworks by Kenya Hondoh`,
+    author: `@kenmikanmi`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
