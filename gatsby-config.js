@@ -9,6 +9,7 @@ if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_ACCESS_TOKEN) {
 }
 
 module.exports = {
+  pathPrefix: `/artworks`,
   siteMetadata: {
     menu: [
       { name: "Artworks", to: "/" },
