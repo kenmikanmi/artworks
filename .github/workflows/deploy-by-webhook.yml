@@ -1,11 +1,6 @@
 name: ci
 
-on:
-  push:
-    branches:
-      - master
-  repository_dispatch:
-    types: [update_contentful]
+on: repository_dispatch
 
 jobs:
   build:
