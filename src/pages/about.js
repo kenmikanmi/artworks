@@ -4,59 +4,74 @@ import React from "react"
 import Layout from "../layouts/Layout"
 import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
+import styled from "styled-components"
 
 const AboutPage = ({ data }) => (
   <Layout>
-    <SiteMetadata title="About" description="Sample description" />
+    <SiteMetadata title="About" description="About me" />
 
     <div className="bg-gray-100">
       <div className="container py-12 lg:pb-16">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-3/5 pb-8 md:pb-0">
-            <h1 className="text-3xl leading-tight font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              About me
-            </h1>
-
-            <h2 className="text-xl leading-tight font-semibold tracking-tight text-blue-600 sm:text-2xl">
-              Interdum et malesuada fames ac ante.
-            </h2>
+            <H1>About me</H1>
             <div className="mt-4 leading-loose">
-              Curabitur non hendrerit dolor. Interdum et malesuada fames ac ante
-              ipsum primis in faucibus. Ut&nbsp;sapien ex, fringilla sed
-              consectetur et, pharetra eget lacus.
+              <UL>
+                <li>熊本出身，横浜在住。</li>
+                <li>絵画，写真，音楽を気ままに，広く浅くやっています。</li>
+              </UL>
+
               <br />
-              <br />
-              Morbi sem leo, varius ut tempus et, tempor sit amet nibh.
-              Curabitur fermentum feugiat libero, sed egestas lorem aliquam et.
-              Praesent id mi purus. Morbi sem leo, varius ut tempus et, tempor
-              sit amet nibh.
-              <br />
-              <br />
-              I'm happy to hear from you:
-              <br />
-              <a
-                href="mailto:contact@johndoe.com"
-                className="border-b border-gray-500 hover:border-blue-600 hover:text-blue-600"
-              >
-                contact@johndoe.com
-              </a>
+              <H2>Activities</H2>
+              <UL>
+                <li><CustomA href="https://kenmikanmi.github.io/blog">ブログをつくりました</CustomA></li>
+                <li>
+                  <CustomA href="https://takumikodera.stores.jp/">
+                    Takumi Kodera
+                  </CustomA>
+                  のアーティストを写真撮影しました。
+                </li>
+                <li>
+                  はっぽんミニフェス＠国立で演奏しました <CustomA href="https://www.youtube.com/watch?v=NOLdAhehQAg&feature=youtu.be">🎥</CustomA>
+                </li>
+              </UL>
             </div>
           </div>
-          <div className="w-full md:w-1/2 xl:w-2/5 md:pl-12">
+          <div className="w-full md:w-1/3 xl:w-2/5 md:pl-5">
             <Img
               fluid={data.author.childImageSharp.fluid}
-              alt="John Doe"
+              alt="My Profile"
               className="rounded-md shadow-md"
             />
           </div>
         </div>
       </div>
     </div>
-    <Newsletter />
   </Layout>
 )
 
 export default AboutPage
+
+const CustomA = styled.a`
+  border-bottom: solid 3px #F29188;
+`
+
+const H1 = styled.h1`
+  font-weight: 900;
+  font-size: 35px;
+  color: #2B5973;
+`
+
+const H2 = styled.h2`
+  font-weight: 800;
+  font-size: 25px;
+  color: #2B5973;
+`
+
+const UL = styled.ul`
+  list-style: disc;
+  padding-left: 20px;
+`
 
 export const query = graphql`
   query {
