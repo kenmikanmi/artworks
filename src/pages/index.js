@@ -9,7 +9,7 @@ import SiteMetadata from "../components/SiteMetadata"
 const IndexPage = ({ data }) => {
   return (
     <Layout>
-      <SiteMetadata title="Home" description="Portfolio of John Doe" />
+      <SiteMetadata title="Home" description="本藤 拳也" />
 
       <Hero />
 
@@ -20,7 +20,6 @@ const IndexPage = ({ data }) => {
           <div className="container">No projects found.</div>
         )}
       </div>
-      <Newsletter />
     </Layout>
   )
 }
