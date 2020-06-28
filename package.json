@@ -46,6 +46,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "rm -rf .cache && gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b gh-pages",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "postinstall": "node ./bin/hello.js",
     "start": "npm run develop",
