@@ -2,7 +2,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import React from "react"
 import Layout from "../layouts/Layout"
-import Newsletter from "../components/Newsletter"
 import SiteMetadata from "../components/SiteMetadata"
 import styled from "styled-components"
 
@@ -31,19 +30,19 @@ const AboutPage = ({ data }) => (
                   </CustomA>
                   のアーティストを写真撮影しました。
                 </li>
-                <li>
+                {/* <li>
                   はっぽんミニフェス＠国立で演奏しました <CustomA href="https://www.youtube.com/watch?v=NOLdAhehQAg&feature=youtu.be">🎥</CustomA>
-                </li>
+                </li> */}
               </UL>
             </div>
           </div>
-          <div className="w-full md:w-1/3 xl:w-2/5 md:pl-5">
+          {/* <div className="w-full md:w-1/3 xl:w-2/5 md:pl-5">
             <Img
               fluid={data.author.childImageSharp.fluid}
               alt="My Profile"
               className="rounded-md shadow-md"
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

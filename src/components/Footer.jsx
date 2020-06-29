@@ -24,7 +24,7 @@ const Footer = () => {
 
   return (
     <div className="container py-12 md:flex md:items-center md:justify-between">
-      <ul className="flex justify-center md:order-2">
+      {/* <ul className="flex justify-center md:order-2">
         <FooterLink href={links.twitter} icon={FaTwitter} label="Twitter" />
         <FooterLink href={links.facebook} icon={FaFacebook} label="Facebook" />
         <FooterLink
@@ -37,7 +37,7 @@ const Footer = () => {
           icon={FaPinterest}
           label="Pinterest"
         />
-      </ul>
+      </ul> */}
       <div className="mt-8 md:mt-0 md:order-1">
         <p className="text-center text-sm md:text-base text-gray-700">
           &copy; 2020 Kenya Hondoh. All rights reserved.
