@@ -23,7 +23,7 @@ const AboutPage = ({ data }) => (
               <br />
               <H2>Activities</H2>
               <UL>
-                <li><CustomA href="https://kenmikanmi.github.io/blog">ブログをつくりました</CustomA></li>
+                <li><CustomA href="https://kenchon.github.io/blog">ブログをつくりました</CustomA></li>
                 <li>
                   <CustomA href="https://takumikodera.stores.jp/">
                     Takumi Kodera
