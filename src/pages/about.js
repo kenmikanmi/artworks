@@ -23,12 +23,12 @@ const AboutPage = ({ data }) => (
               <br />
               <H2>Activities</H2>
               <UL>
-                <li><CustomA href="https://kenchon.github.io/blog">ブログをつくりました</CustomA></li>
+                {/* <li><C「ustomA href="https://kenchon.github.io/blog">ブログをつくりました</CustomA></li> */}
                 <li>
                   <CustomA href="https://takumikodera.stores.jp/">
                     Takumi Kodera
                   </CustomA>
-                  のアーティストを写真撮影しました。
+                  のアーティスト写真を撮影しました。
                 </li>
                 {/* <li>
                   はっぽんミニフェス＠国立で演奏しました <CustomA href="https://www.youtube.com/watch?v=NOLdAhehQAg&feature=youtu.be">🎥</CustomA>
