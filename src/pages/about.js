@@ -17,7 +17,7 @@ const AboutPage = ({ data }) => (
             <div className="mt-4 leading-loose">
               <UL>
                 <li>熊本出身，横浜在住。</li>
-                <li>絵画，写真，音楽を気ままに，広く浅くやっています。</li>
+                <li>絵画，写真，音楽などを気ままに，広く浅くやっています ✌️</li>
               </UL>
 
               <br />
