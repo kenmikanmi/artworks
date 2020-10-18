@@ -24,7 +24,7 @@ module.exports = {
     locale: "en",
     title: `Kenya Hondoh`,
     description: `Artworks by Kenya Hondoh`,
-    author: `@kenmikanmi`,
+    author: `@kenchon`,
   },
   plugins: [
     `gatsby-plugin-postcss`,
