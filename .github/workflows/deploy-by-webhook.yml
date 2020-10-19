@@ -9,6 +9,11 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+      - name: Set GitHub User Info
+        run: |
+          git config --global user.email ${GIT_ADDRESS}
+          git config --global user.name ${GIT_USERNAME}
+          git remote set-url origin https://${GIT_USERNAME}:${GIT_SECRET}@github.com/kenchon/artworks
       - name: Install Dependencies
         run: yarn install
       - name: Build and Deploy
