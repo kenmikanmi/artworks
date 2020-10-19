@@ -1,7 +1,11 @@
-name: ci
+#####################################
+name: Deploy Contents to Github Pages
+#####################################
 
+# RUNS WHEN CONTENTFUL IS UPDATED
 on: repository_dispatch
 
+# WORKFLOW DEFINITION
 jobs:
   build:
     name: build
@@ -9,18 +13,22 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
+        
       - name: Set GitHub User Info
         run: |
           git config --global user.email ${{secrets.GIT_ADDRESS}}
           git config --global user.name ${{secrets.GIT_USERNAME}}
           git remote set-url origin https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_SECRET}}@github.com/kenchon/artworks
+
       - name: Install Dependencies
         run: yarn install
+      
       - name: Build and Deploy
-        run: yarn deploy
         env:
           CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
           CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+        run: yarn deploy
+      
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
